@@ -2,7 +2,7 @@ package lexer
 
 import (
 	"testing"
-	"donkey/token"
+	"github.com/geertvl/donkey/token"
 )
 
 func TestNextToken(t *testing.T) {

@@ -2,7 +2,7 @@ package ast
 
 import (
 	"testing"
-	"donkey/token"
+	"github.com/geertvl/donkey/token"
 )
 
 func TestString(t *testing.T) {

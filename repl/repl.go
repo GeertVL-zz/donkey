@@ -4,8 +4,8 @@ import (
 	"io"
 	"bufio"
 	"fmt"
-	"donkey/lexer"
-	"donkey/token"
+	"github.com/geertvl/donkey/lexer"
+	"github.com/geertvl/donkey/token"
 )
 
 const PROMPT = ">> "

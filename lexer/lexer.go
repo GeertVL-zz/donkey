@@ -1,7 +1,7 @@
 package lexer
 
 import (
-	"donkey/token"
+	"github.com/geertvl/donkey/token"
 )
 
 type Lexer struct {

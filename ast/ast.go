@@ -1,7 +1,7 @@
 package ast
 
 import (
-	"donkey/token"
+	"github.com/geertvl/donkey/token"
 	"bytes"
 )
 
@@ -144,6 +144,21 @@ func (il *IntegerLiteral) String() string {
 
 func (il *IntegerLiteral) expressionNode() {}
 
+type FunctionLiteral struct {
+	Token		token.Token
+	Parameters	[]*Identifier
+	Body		*BlockStatement
+}
+
+func (fl *FunctionLiteral) expressionNode() {}
+func (fl *FunctionLiteral) TokenLiteral() string { return fl.Token.Literal }
+func (fl *FunctionLiteral) String() string {
+	var out bytes.Buffer
+
+	return out.String()
+}
+
+
 type PrefixExpression struct {
 	Token 		token.Token
 	Operator 	string
@@ -192,6 +207,7 @@ func (oe *InfixExpression) String() string {
 
 func (oe *InfixExpression) expressionNode() {}
 
+
 type Boolean struct {
 	Token 		token.Token
 	Value 		bool
@@ -206,6 +222,7 @@ func (b *Boolean) String() string {
 }
 
 func (b *Boolean) expressionNode() {}
+
 
 type IfExpression struct {
 	Token         token.Token
@@ -236,6 +253,7 @@ func (ie *IfExpression) String() string {
 
 func (ie *IfExpression) expressionNode() {}
 
+
 type BlockStatement struct {
 	Token 		token.Token
 	Statements  []Statement
@@ -255,6 +273,5 @@ func (bs *BlockStatement) String() string {
 	return bs.Token.Literal
 }
 
-func (bs *BlockStatement) statementNode() {
-	panic("implement me")
-}
+func (bs *BlockStatement) statementNode() {}
+
