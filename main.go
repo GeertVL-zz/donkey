@@ -3,7 +3,7 @@ package main
 import (
 	user2 "os/user"
 	"fmt"
-	"donkey/repl"
+	"github.com/geertvl/donkey/repl"
 	"os"
 )
 
