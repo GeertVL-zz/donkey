@@ -28,7 +28,7 @@ var precedences = map[token.TokenType]int {
 	token.MINUS:	SUM,
 	token.SLASH:	PRODUCT,
 	token.ASTERISK:	PRODUCT,
-	token.LPAREN: CALL,
+	token.LPAREN:   CALL,
 }
 
 type (
@@ -362,7 +362,7 @@ func (p *Parser) parseCallExpression(function ast.Expression) ast.Expression {
 }
 
 func (p *Parser) parseCallArguments() []ast.Expression {
-	var args []ast.Expression
+	args := []ast.Expression{}
 
 	if p.peekTokenIs(token.RPAREN) {
 		p.nextToken()

@@ -287,7 +287,7 @@ func (ce *CallExpression) TokenLiteral() string { return ce.Token.Literal }
 func (ce *CallExpression) String() string {
 	var out bytes.Buffer
 
-	args := []string{}
+	var args []string
 	for _, a := range ce.Arguments {
 		args = append(args, a.String())
 	}
