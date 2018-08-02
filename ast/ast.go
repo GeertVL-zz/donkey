@@ -261,6 +261,10 @@ type BlockStatement struct {
 }
 
 func (bs *BlockStatement) TokenLiteral() string {
+	return bs.Token.Literal
+}
+
+func (bs *BlockStatement) String() string {
 	var out bytes.Buffer
 
 	for _, s := range bs.Statements {
@@ -268,10 +272,6 @@ func (bs *BlockStatement) TokenLiteral() string {
 	}
 
 	return out.String()
-}
-
-func (bs *BlockStatement) String() string {
-	return bs.Token.Literal
 }
 
 func (bs *BlockStatement) statementNode() {}
